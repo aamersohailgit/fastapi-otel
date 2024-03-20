@@ -66,28 +66,28 @@
     {
         "label": "tracer_provider",
         "kind": 5,
-        "importPath": "app",
-        "description": "app",
-        "peekOfCode": "tracer_provider = trace.get_tracer_provider()\n# Configure Jaeger exporter\njaeger_exporter = JaegerExporter(\n    agent_host_name=\"localhost\",\n    agent_port=6831,\n)\n# Add the Jaeger exporter to the tracer provider\ntracer_provider.add_span_processor(BatchSpanProcessor(jaeger_exporter))\n# Create a FastAPI app and instrument it\napp = FastAPI()",
-        "detail": "app",
+        "importPath": "app.app",
+        "description": "app.app",
+        "peekOfCode": "tracer_provider = trace.get_tracer_provider()\n# Configure Jaeger exporter\njaeger_exporter = JaegerExporter(\n    agent_host_name=\"jaeger\",\n    agent_port=6831,\n)\n# Add the Jaeger exporter to the tracer provider\ntracer_provider.add_span_processor(BatchSpanProcessor(jaeger_exporter))\n# Create a FastAPI app and instrument it\napp = FastAPI()",
+        "detail": "app.app",
         "documentation": {}
     },
     {
         "label": "jaeger_exporter",
         "kind": 5,
-        "importPath": "app",
-        "description": "app",
-        "peekOfCode": "jaeger_exporter = JaegerExporter(\n    agent_host_name=\"localhost\",\n    agent_port=6831,\n)\n# Add the Jaeger exporter to the tracer provider\ntracer_provider.add_span_processor(BatchSpanProcessor(jaeger_exporter))\n# Create a FastAPI app and instrument it\napp = FastAPI()\nFastAPIInstrumentor.instrument_app(app)\n# Define a simple route",
-        "detail": "app",
+        "importPath": "app.app",
+        "description": "app.app",
+        "peekOfCode": "jaeger_exporter = JaegerExporter(\n    agent_host_name=\"jaeger\",\n    agent_port=6831,\n)\n# Add the Jaeger exporter to the tracer provider\ntracer_provider.add_span_processor(BatchSpanProcessor(jaeger_exporter))\n# Create a FastAPI app and instrument it\napp = FastAPI()\nFastAPIInstrumentor.instrument_app(app)\n# Define a simple route",
+        "detail": "app.app",
         "documentation": {}
     },
     {
         "label": "app",
         "kind": 5,
-        "importPath": "app",
-        "description": "app",
+        "importPath": "app.app",
+        "description": "app.app",
         "peekOfCode": "app = FastAPI()\nFastAPIInstrumentor.instrument_app(app)\n# Define a simple route\n@app.get(\"/\")\nasync def read_root():\n    return {\"Hello\": \"World\"}",
-        "detail": "app",
+        "detail": "app.app",
         "documentation": {}
     }
 ]

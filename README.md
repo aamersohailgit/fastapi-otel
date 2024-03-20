@@ -70,6 +70,18 @@ The application is a simple FastAPI web service instrumented with OpenTelemetry 
 
    The FastAPI application will be available at `http://localhost:8000`.
 
+### Running the Application with docker-compose
+
+1. Change the `agent_host_name = "jaeger"`  in app.py
+
+   ```
+   jaeger_exporter = JaegerExporter(
+   agent_host_name="jaeger",
+   agent_port=6831,
+   )
+   ```
+2. Start Jaeger with `docker-compose up --build`
+
 ### Viewing Traces in Jaeger
 
 - After the application is running and serving requests, navigate to the Jaeger UI (`http://localhost:16686`).
