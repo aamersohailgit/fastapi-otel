@@ -1,0 +1,93 @@
+[
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "trace",
+        "importPath": "opentelemetry",
+        "description": "opentelemetry",
+        "isExtraImport": true,
+        "detail": "opentelemetry",
+        "documentation": {}
+    },
+    {
+        "label": "JaegerExporter",
+        "importPath": "opentelemetry.exporter.jaeger.thrift",
+        "description": "opentelemetry.exporter.jaeger.thrift",
+        "isExtraImport": true,
+        "detail": "opentelemetry.exporter.jaeger.thrift",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPIInstrumentor",
+        "importPath": "opentelemetry.instrumentation.fastapi",
+        "description": "opentelemetry.instrumentation.fastapi",
+        "isExtraImport": true,
+        "detail": "opentelemetry.instrumentation.fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "TracerProvider",
+        "importPath": "opentelemetry.sdk.trace",
+        "description": "opentelemetry.sdk.trace",
+        "isExtraImport": true,
+        "detail": "opentelemetry.sdk.trace",
+        "documentation": {}
+    },
+    {
+        "label": "BatchSpanProcessor",
+        "importPath": "opentelemetry.sdk.trace.export",
+        "description": "opentelemetry.sdk.trace.export",
+        "isExtraImport": true,
+        "detail": "opentelemetry.sdk.trace.export",
+        "documentation": {}
+    },
+    {
+        "label": "SERVICE_NAME",
+        "importPath": "opentelemetry.sdk.resources",
+        "description": "opentelemetry.sdk.resources",
+        "isExtraImport": true,
+        "detail": "opentelemetry.sdk.resources",
+        "documentation": {}
+    },
+    {
+        "label": "Resource",
+        "importPath": "opentelemetry.sdk.resources",
+        "description": "opentelemetry.sdk.resources",
+        "isExtraImport": true,
+        "detail": "opentelemetry.sdk.resources",
+        "documentation": {}
+    },
+    {
+        "label": "tracer_provider",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "tracer_provider = trace.get_tracer_provider()\n# Configure Jaeger exporter\njaeger_exporter = JaegerExporter(\n    agent_host_name=\"localhost\",\n    agent_port=6831,\n)\n# Add the Jaeger exporter to the tracer provider\ntracer_provider.add_span_processor(BatchSpanProcessor(jaeger_exporter))\n# Create a FastAPI app and instrument it\napp = FastAPI()",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "jaeger_exporter",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "jaeger_exporter = JaegerExporter(\n    agent_host_name=\"localhost\",\n    agent_port=6831,\n)\n# Add the Jaeger exporter to the tracer provider\ntracer_provider.add_span_processor(BatchSpanProcessor(jaeger_exporter))\n# Create a FastAPI app and instrument it\napp = FastAPI()\nFastAPIInstrumentor.instrument_app(app)\n# Define a simple route",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "app = FastAPI()\nFastAPIInstrumentor.instrument_app(app)\n# Define a simple route\n@app.get(\"/\")\nasync def read_root():\n    return {\"Hello\": \"World\"}",
+        "detail": "app",
+        "documentation": {}
+    }
+]
