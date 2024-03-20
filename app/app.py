@@ -8,13 +8,13 @@ from opentelemetry.sdk.resources import SERVICE_NAME, Resource
 
 # Set up the tracer provider
 trace.set_tracer_provider(
-    TracerProvider(resource=Resource.create({SERVICE_NAME: "Fastapi"}))
+    TracerProvider(resource=Resource.create({SERVICE_NAME: "Fastapi-users"}))
 )
 tracer_provider = trace.get_tracer_provider()
 
 # Configure Jaeger exporter
 jaeger_exporter = JaegerExporter(
-    agent_host_name="localhost",
+    agent_host_name="jaeger",
     agent_port=6831,
 )
 
