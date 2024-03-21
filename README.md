@@ -89,4 +89,4 @@ The application is a simple FastAPI web service instrumented with OpenTelemetry 
 ## Contributing
 
 - **AUTHOR** - **AAMER**
-- YouTube - [Prograamer YouTube Channel ]([https://youtu.be/MiBSgcnmiAM?si=c99OYctCleoE8AaW]())
+- YouTube - [Prograamer YouTube Channel](https://www.youtube.com/@prograamer)
