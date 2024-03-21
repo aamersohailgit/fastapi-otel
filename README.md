@@ -17,7 +17,6 @@ The application is a simple FastAPI web service instrumented with OpenTelemetry 
 
 - Python 3.6+
 - Docker
--
 - pip
 
 ### Installation
@@ -78,4 +77,4 @@ The application is a simple FastAPI web service instrumented with OpenTelemetry 
 ## Contributing
 
 - **AUTHOR** - **AAMER**
-- YouTube - [https://youtu.be/MiBSgcnmiAM?si=c99OYctCleoE8AaW]()
+- YouTube - [Prograamer YouTube Channel ]([https://youtu.be/MiBSgcnmiAM?si=c99OYctCleoE8AaW]())
